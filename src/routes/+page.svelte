@@ -1,35 +1,20 @@
 <script>
   import { supabase } from "../lib/db";
 	import { onMount } from "svelte";
+  let count = 0;
 
-  let names = [];
-
-  onMount(() => {
-    fetchNames()
-  })
-
-  const fetchNames = async () => {
-    let {data, error} = await supabase.from("name").select("*");
-    if (error) {
-      console.log("error", error)
-    } else {
-      names = data
-    }
+  function incrementCount() {
+    count++;
   }
-
   
 
 </script>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <h1 class="text-3xl font-bold underline">
   Hello world!
 </h1>
 
 <div>
-  {#each names as name (name.id)}
-    {name.name} {name.id} {name.created_at}
-  {/each}
+  <p>The count {count}</p>
+  <button class="border border-cyan-700 rounded-lg p-2 bg-cyan-500 hover:bg-cyan-300 hover:underline" on:click={incrementCount}>Increase</button>
 </div>
