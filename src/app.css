@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* add font Porto Bianco Alt */
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-weight: 400;
+  src: url(/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+/* SemiBold 600 */
+@font-face {
+  font-family: 'Inter SemiBold';
+  font-weight: 600;
+  src: url(/Inter/static/Inter-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: url(/Inter/static/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Porto Bianco Alt';
+  font-weight: 400;
+  src: url('/Porto Bianco Alt.ttf');
+}
+
+#hero {
+  position: relative;
+  height: 500px;
+  /* width: 100%; */
+  background: linear-gradient(rgb(51,51,51,0.7), rgb(51,51,51,0.7)), url(/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#hero::before {
+  background-color: black;
+}
+
+#hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#video-pic {
+  background: url("/Video Thumbnail.png");
+  width: 580px;
+  height: 326px;
+}

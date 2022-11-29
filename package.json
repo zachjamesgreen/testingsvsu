@@ -34,6 +34,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@supabase/supabase-js": "^2.1.0"
+		"@supabase/supabase-js": "^2.1.0",
+		"firebase": "^9.14.0",
+		"svelte-preprocess-import-assets": "^0.2.3"
 	}
 }

@@ -5,6 +5,7 @@ COPY package.json .
 RUN npm install
 COPY build ./build
 
-EXPOSE 3000
+ENV PORT 4000
+EXPOSE 4000
 
 CMD ["node", "build/index.js"]
